@@ -1,9 +1,13 @@
 package com.mileshko.lesya.entity;
 
+import java.util.List;
+
 public class Manufacturer {
     private Long id;
     private String name;
     private String country;
+    private List<Souvenir> souvenirs;
+
 
     public Manufacturer() {
     }
@@ -13,10 +17,11 @@ public class Manufacturer {
         this.country = country;
     }
 
-    public Manufacturer(Long id, String name, String country) {
+    public Manufacturer(Long id, String name, String country, List<Souvenir> souvenirs) {
         this.id = id;
         this.name = name;
         this.country = country;
+        this.souvenirs = souvenirs;
     }
 
     public Long getId() {
@@ -43,6 +48,13 @@ public class Manufacturer {
         this.country = country;
     }
 
+    public List<Souvenir> getSouvenirs() {
+        return souvenirs;
+    }
+
+    public void setSouvenirs(List<Souvenir> souvenirs) {
+        this.souvenirs = souvenirs;
+    }
     @Override
     public String toString() {
         return "Manufacturer{" +
